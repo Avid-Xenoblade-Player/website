@@ -1,0 +1,37 @@
+img.logo {
+	}
+
+.logo-container {
+	width: 704px; /* Set a width for the div */
+  	height: 248px; /* Set a height for the div */
+  	background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%), /* Gradient A */
+                    	radial-gradient(circle at center, #333333 0%, #33333300 100%), /* Gradient B */
+                    	radial-gradient(circle at center, #888888 0%, #88888800 100%); /* Gradient C */
+  	background-repeat: no-repeat; /* Prevent the background from repeating */
+  	background-position: center center; /* Center the background */
+  	animation: zoomEffect 5s infinite linear; /* Infinite zoom effect */
+}
+
+@keyframes zoomEffect {
+	0% {
+    	background-size: 60% 60%, 40% 40%, 20% 20%; /* A is largest, B is medium, C is smallest */
+   } 
+  	16% {
+    	background-size: 80% 80%, 60% 60%, 40% 40%; /* C grows to medium, A shrinks to medium, B grows to largest */
+   }
+  	33% {
+    	background-size: 100% 100%, 80% 80%, 60% 60%; /* B shrinks to smallest, C grows to largest, A returns to largest */
+   }
+  	50% {
+		background-size: 0% 0%, 100% 100%, 80% 80%;
+	}
+	66% {
+		background-size: 20% 20%, 0% 0%, 100% 100%;
+	}
+	83% {
+		background-size: 40% 40%, 20% 20%, 0% 0%;
+	}
+	100% {
+		background-size: 60% 60%, 40% 40%, 20% 20%;
+	}
+}
