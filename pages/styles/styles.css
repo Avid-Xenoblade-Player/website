@@ -12,6 +12,38 @@ img.logo {
   	animation: zoomEffect 5s infinite linear; /* Infinite zoom effect */
 }
 
+body.codes { /* Code page stylings */
+  border-radius: 10%; /* Small radius */
+  background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%), /* Fade to nothing, so the other colors appear */
+                  radial-gradient(circle at top left, #333333 0%, #33333300 100%),
+                  radial-gradient(circle at bottom right, #0000ff 0%, #0000ff00 100%);
+  animation: outwardFlow 5s infinite; /* Move infinitely, then repeat every 5 seconds */
+}
+
+@keyframes outwardFlow { /* Gradient moving animation. */
+  0% {
+    background-size: 0%, 50%, 100%; /* Start normally. */
+  } 
+  16% {
+    background-size: 50%, 100%, 150%; /* Move to right */
+  }
+  33% {
+    background-size: 100%, 150%, 200%; /* Move to right */
+  }
+  50% {
+    background-size: 150%, 200%, 250%; /* Move to right */
+  }
+  63% {
+    background-size: 100%, 150%, 200%; /* Move back left */
+  }
+  84% {
+    background-size: 50%, 100%, 150%; /* Move back left */
+  }
+  100% {
+    background-size: 0%, 50%, 100%;  /* Back to start. */
+  }
+}
+
 @keyframes zoomEffect {
 	0% {
     	background-size: 60% 60%, 40% 40%, 20% 20%; /* A is largest, B is medium, C is smallest */
