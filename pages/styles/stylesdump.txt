@@ -19,43 +19,21 @@ a:hover { /* Change appearance on hover */
   padding: 0px 5px;
 }
 
-body {
-    background-image: url(\\\\\\\'nature.jpg\\\\\\\')
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url(\\\\\\\'home_background.jpg\\\\\\\');
-    background-size: cover;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 1px;
-    background-image: url(\\\\\\\'background.jpg\\\\\\\');
-    background-size: cover;
-}
-
 body { /* Global body styling */
-    font-family: \\\\\\\"Atkinson Hyperlegible\\\\\\\", sans-serif; /* This is just a font I like. */
+    font-family: "Atkinson Hyperlegible", sans-serif; /* This is just a font I like. */
     margin: 0 3.1415 0 0; /* Margin to the left. */
     padding: 0; /* No padding. */
     }
-body.codes { /* Code page stylings */
-  border-radius: 10%; /* Small radius */
-  background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%), /* Fade to nothing, so the other colors appear */
-                  radial-gradient(circle at top left, #333333 0%, #33333300 100%),
-                  radial-gradient(circle at bottom right, #0000ff 0%, #0000ff00 100%);
-  animation: outwardFlow 5s infinite; /* Move infinitely, then repeat every 5 seconds */
-}
-body.five {
-  background-image: linear-gradient(#980000, #000000, #000000); /* Just a simple downwards gradient. Two #000000 so that it starts 1/3 of the way up the page rather than halfway. */
+
+body.example {
+  border-radius: number%;
+  background-image: radial-gradient(circle at center, #hexa 0%, #hexa00 100%),
+                  radial-gradient(circle at top left, #hexb 0%, #hexb00 100%),
+                  radial-gradient(circle at bottom right, #hexc 0%, #hexc00 100%);
+  animation: outwardFlow (number)s infinite; /* Move infinitely, then repeat every 5 seconds */
 }
 
-body.four {
+body.exampleinuse {
    /* No radius, defaulting to 100% here. */
   background-image: radial-gradient(circle at center, #000000 0%, #00000000 100%),
                     radial-gradient(circle at center, #ffffff 0%, #ffffff00 100%),
@@ -63,48 +41,9 @@ body.four {
   animation: outwardFlow 10s infinite;
 }
 
-
-body.home { /* Body for homepage */
-    background-attachment: fixed; /* Image doesn\\\\\\\'t move */
-    background-size: cover; /* Fill the whole page */
-    animation: 
-    fade 3.5s steps(40, end); /* Fade in for 3.5 seconds */
-    background-image: url(dontlookthroughmycodeandfindthisimage.png); 
-  }
-/* From here on in, each post has a different background animation. Looks cool. */
-body.one { 
-  background-attachment: fixed;
-  background-size: cover;
-  animation: 
-    fade 3.5s steps(50, end); /* Fades in from the start over a 3.5 second period, then stops */
-  background-image: url(monkey.jpeg); /* monkey image */ 
-}
-
-body.three {
-  border-radius: 70%; /* Slightly larger gradient */
-  background-image: radial-gradient(circle at center, #006400 0%, #80400000 100%), /* Three gradients */
-                  radial-gradient(circle at top left, #333333 0%, #66996600 100%),
-                  radial-gradient(circle at bottom right, #0000ff 0%, #0066cc00 100%);
-  animation: outwardFlow 5s infinite;
-}
-
-body.two {
-  border-radius: 50%; /* Medium size */
-  background-image: radial-gradient(circle at center, #ff0000 0%, #ff000000 100%),
-                     radial-gradient(circle at center, #00ff00 0%, #00ff0000 100%),
-                     radial-gradient(circle at center, #0000ff 0%, #0000ff00 100%); /* Create three circle colours */
-  background-size: 0%, 50%, 100%; /* Assign them sizes */
-  background-repeat: repeat; /* Repeat the image infinitely */
-  animation: outwardFlow 5s infinite; /* animate forever, repeating every five seconds */
-}
-
 button {
-    width: 5%;
-    height: 5%;
-    background-color: #f2c8a2;
-}
-
-button {
+  height: 5%
+  widt: 5%
   background-color: #333333;
   color: #feebee;
   font-family: \\\\\\\"Atkinson Hypereligible\\\\\\\", sans-serif;
@@ -129,10 +68,10 @@ div.postcontent { /* Div for .html pages */
 
 h1 {
     text-align: center;
-    text-decoration: overline; /* Overline is such a cool decoration, so I put it in. It\\\\\\\'s only visible during the typing, however. */
+    text-decoration: overline; /* Overline is such a cool decoration, so I put it in. It's only visible during the typing, however. */
     color: #eeeeee;
     background-color: #333333;
-    overflow: hidden; /* Keeps it hidden before it is \\\\\\\'typed\\\\\\\'. */
+    overflow: hidden; /* Keeps it hidden before it is 'typed'. */
     border-right: .5em solid #ffffff; /* Cursor rectangle */
     /*white-space: nowrap; If uncommented, keeps content on one line. Optional. */
     margin: 0 auto; /* Scrolling effect */
@@ -142,52 +81,9 @@ h1 {
         blink-caret .75s step-end infinite; /* Cursor animation */
 }
 
-
-h2 {
-    font-family:\\\\\\\'Gill Sans\\\\\\\', \\\\\\\'Gill Sans MT\\\\\\\', Calibri, \\\\\\\'Trebuchet MS\\\\\\\', sans-serif;
-}
-
-h2,h1 {
-    font-family:\\\\\\\'Gill Sans\\\\\\\', \\\\\\\'Gill Sans MT\\\\\\\', Calibri, \\\\\\\'Trebuchet MS\\\\\\\', sans-serif;
-}
-
-img {
-    width: 500px;
-}
-
-img.fixed { /* This is only for the image gallery. */
-  height: 80%; 
-  width: 80%;
-}
-
-p {
-  color: #ffeffe;
-}
-
-p.angryerror { /* Pink and bold. */
-  font-size: 15px;
-  color: #ff0051;
-  font-family: monospace;
-  letter-spacing: .14em;
-  font-weight: bold;
-}
-
-p.cwisaesritam {
+p.cursive {
   letter-spacing: -2px; /* Pushes the letters together to make it look cursive. */
 }
-
-p.error {
-  font-size: 15px;
-  color: #fffeef;
-  font-family: monospace;
-  letter-spacing: .14em;
-}
-
-p.system_data {
-    font-size: 10px;
-    color: #f8f8f8;
-    font-style: oblique; /* Italics, but preserves font size. */
-    }
 
 p.typewriter {
     color: #eeeeee;
@@ -202,22 +98,13 @@ p.typewriter {
       blink-caret .75s step-end infinite;
   }
 
-.container {
-    display: flex;
-}
-
-/* Main content */
 .main {
   margin-top: 30px; /* Adds a top margin to avoid content overlay */
 }
 
-.margin {
-    margin:16px!important
-}
-
 /* Link styling */
 .navbar a {
-  text-decoration: double; /* I\\\\\\\'d like to have it work, but this doesn\\\\\\\'t work. So it\\\\\\\'s useless. */
+  text-decoration: double; /* I'd like to have it work, but this doesn't work. So it's useless. */
   float: left; /* Stay on the left. */
   display: block;
   color: #feebee;
@@ -271,7 +158,7 @@ p.typewriter {
   width: 100%;
   height: 8px;
   background: #cccccc;
-  margin-top: 55px; /* Moves the bar below the navbar so it\\\\\\\'s not blocked, but still at the top. */
+  margin-top: 55px; /* Moves the bar below the navbar so it's not blocked, but still at the top. */
 }
 
 .shaky {
@@ -336,11 +223,6 @@ p.typewriter {
     margin-bottom: 5em;
 }
 
-#sub {
-    font-size: large;
-    font-family: \\\\\\\'Trebuchet MS\\\\\\\', \\\\\\\'Lucida Sans Unicode\\\\\\\', \\\\\\\'Lucida Grande\\\\\\\', \\\\\\\'Lucida Sans\\\\\\\', Arial, sans-serif;
-}
-
 #weblinks {
     width: 80%;
     margin: 0 auto;
@@ -348,4 +230,3 @@ p.typewriter {
     background-color: #d6a57a;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
