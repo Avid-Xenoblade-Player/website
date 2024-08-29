@@ -1,4 +1,4 @@
-Hello! swimga skibidi danc
+Hello!
 
 CHEATSHEET:
 
