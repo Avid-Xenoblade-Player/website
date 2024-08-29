@@ -5,116 +5,6 @@ Eden:
     
 }
 
-body {
-    background-image: url('nature.jpg')
-}
-
-.margin {
-    margin:16px!important
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('home_background.jpg');
-    background-size: cover;
-}
-
-#weblinks {
-    width: 80%;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #d6a57a;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#mainbody {
-    width: 80%;
-    margin: 0 auto;
-    padding-left: 30px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 30px;
-    background-color: #d6a57a;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-#spacing {
-    margin-bottom: 5em;
-}
-
-#sally {
-    width: 35%;
-    margin-left: 165px;
-    padding: 20px;
-    background-color: #d6a57a;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-img {
-    width: 500px;
-}
-
-.container {
-    display: flex;
-}
-
-#info {
-    margin-left: 100px;
-    background-color: #d6a57a;
-    width: 730px;
-    padding: 20px;
-    text-align: center;
-}
-
-h2,h1 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-button {
-    width: 5%;
-    height: 5%;
-    background-color: #f2c8a2;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 1px;
-    background-image: url('background.jpg');
-    background-size: cover;
-}
-
-#content {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #849e75;
-    box-shadow: 20px 20px 10px rgba(0,0,0,0.1);
-}
-
-.post {
-    margin-bottom: 20px;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
-}
-
-h2 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-#sub {
-    font-size: large;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.smaller {
-    width: 40%;
-}
-
 Matthew:
 
 a { /* Link styling */
@@ -129,18 +19,31 @@ a:hover { /* Change appearance on hover */
   padding: 0px 5px;
 }
 
+body {
+    background-image: url(\\\\\\\'nature.jpg\\\\\\\')
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(\\\\\\\'home_background.jpg\\\\\\\');
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1px;
+    background-image: url(\\\\\\\'background.jpg\\\\\\\');
+    background-size: cover;
+}
+
 body { /* Global body styling */
-    font-family: "Atkinson Hyperlegible", sans-serif; /* This is just a font I like. */
+    font-family: \\\\\\\"Atkinson Hyperlegible\\\\\\\", sans-serif; /* This is just a font I like. */
     margin: 0 3.1415 0 0; /* Margin to the left. */
     padding: 0; /* No padding. */
     }
-body.home { /* Body for homepage */
-    background-attachment: fixed; /* Image doesn't move */
-    background-size: cover; /* Fill the whole page */
-    animation: 
-    fade 3.5s steps(40, end); /* Fade in for 3.5 seconds */
-    background-image: url(dontlookthroughmycodeandfindthisimage.png); 
-  }
 body.codes { /* Code page stylings */
   border-radius: 10%; /* Small radius */
   background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%), /* Fade to nothing, so the other colors appear */
@@ -148,6 +51,26 @@ body.codes { /* Code page stylings */
                   radial-gradient(circle at bottom right, #0000ff 0%, #0000ff00 100%);
   animation: outwardFlow 5s infinite; /* Move infinitely, then repeat every 5 seconds */
 }
+body.five {
+  background-image: linear-gradient(#980000, #000000, #000000); /* Just a simple downwards gradient. Two #000000 so that it starts 1/3 of the way up the page rather than halfway. */
+}
+
+body.four {
+   /* No radius, defaulting to 100% here. */
+  background-image: radial-gradient(circle at center, #000000 0%, #00000000 100%),
+                    radial-gradient(circle at center, #ffffff 0%, #ffffff00 100%),
+                    radial-gradient(circle at center, #123456 0%, #12345600 100%);
+  animation: outwardFlow 10s infinite;
+}
+
+
+body.home { /* Body for homepage */
+    background-attachment: fixed; /* Image doesn\\\\\\\'t move */
+    background-size: cover; /* Fill the whole page */
+    animation: 
+    fade 3.5s steps(40, end); /* Fade in for 3.5 seconds */
+    background-image: url(dontlookthroughmycodeandfindthisimage.png); 
+  }
 /* From here on in, each post has a different background animation. Looks cool. */
 body.one { 
   background-attachment: fixed;
@@ -155,6 +78,14 @@ body.one {
   animation: 
     fade 3.5s steps(50, end); /* Fades in from the start over a 3.5 second period, then stops */
   background-image: url(monkey.jpeg); /* monkey image */ 
+}
+
+body.three {
+  border-radius: 70%; /* Slightly larger gradient */
+  background-image: radial-gradient(circle at center, #006400 0%, #80400000 100%), /* Three gradients */
+                  radial-gradient(circle at top left, #333333 0%, #66996600 100%),
+                  radial-gradient(circle at bottom right, #0000ff 0%, #0066cc00 100%);
+  animation: outwardFlow 5s infinite;
 }
 
 body.two {
@@ -167,64 +98,16 @@ body.two {
   animation: outwardFlow 5s infinite; /* animate forever, repeating every five seconds */
 }
 
-body.three {
-  border-radius: 70%; /* Slightly larger gradient */
-  background-image: radial-gradient(circle at center, #006400 0%, #80400000 100%), /* Three gradients */
-                  radial-gradient(circle at top left, #333333 0%, #66996600 100%),
-                  radial-gradient(circle at bottom right, #0000ff 0%, #0066cc00 100%);
-  animation: outwardFlow 5s infinite;
-}
-
-body.four {
-   /* No radius, defaulting to 100% here. */
-  background-image: radial-gradient(circle at center, #000000 0%, #00000000 100%),
-                    radial-gradient(circle at center, #ffffff 0%, #ffffff00 100%),
-                    radial-gradient(circle at center, #123456 0%, #12345600 100%);
-  animation: outwardFlow 10s infinite;
-}
-
-
-body.five {
-  background-image: linear-gradient(#980000, #000000, #000000); /* Just a simple downwards gradient. Two #000000 so that it starts 1/3 of the way up the page rather than halfway. */
-}
-
-@keyframes outwardFlow { /* Gradient moving animation. */
-  0% {
-    background-size: 0%, 50%, 100%; /* Start normally. */
-  } 
-  16% {
-    background-size: 50%, 100%, 150%; /* Move to right */
-  }
-  33% {
-    background-size: 100%, 150%, 200%; /* Move to right */
-  }
-  50% {
-    background-size: 150%, 200%, 250%; /* Move to right */
-  }
-  63% {
-    background-size: 100%, 150%, 200%; /* Move back left */
-  }
-  84% {
-    background-size: 50%, 100%, 150%; /* Move back left */
-  }
-  100% {
-    background-size: 0%, 50%, 100%;  /* Back to start. */
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 0%; /* At the start, invisible. */
-  }
-  100% {
-    opacity: 100%; /* At the end, fully visible. */
-  }
+button {
+    width: 5%;
+    height: 5%;
+    background-color: #f2c8a2;
 }
 
 button {
   background-color: #333333;
   color: #feebee;
-  font-family: "Atkinson Hypereligible", sans-serif;
+  font-family: \\\\\\\"Atkinson Hypereligible\\\\\\\", sans-serif;
   height: 50px;
   width: 100px;
   font-size: 16px;
@@ -246,10 +129,10 @@ div.postcontent { /* Div for .html pages */
 
 h1 {
     text-align: center;
-    text-decoration: overline; /* Overline is such a cool decoration, so I put it in. It's only visible during the typing, however. */
+    text-decoration: overline; /* Overline is such a cool decoration, so I put it in. It\\\\\\\'s only visible during the typing, however. */
     color: #eeeeee;
     background-color: #333333;
-    overflow: hidden; /* Keeps it hidden before it is 'typed'. */
+    overflow: hidden; /* Keeps it hidden before it is \\\\\\\'typed\\\\\\\'. */
     border-right: .5em solid #ffffff; /* Cursor rectangle */
     /*white-space: nowrap; If uncommented, keeps content on one line. Optional. */
     margin: 0 auto; /* Scrolling effect */
@@ -260,6 +143,18 @@ h1 {
 }
 
 
+h2 {
+    font-family:\\\\\\\'Gill Sans\\\\\\\', \\\\\\\'Gill Sans MT\\\\\\\', Calibri, \\\\\\\'Trebuchet MS\\\\\\\', sans-serif;
+}
+
+h2,h1 {
+    font-family:\\\\\\\'Gill Sans\\\\\\\', \\\\\\\'Gill Sans MT\\\\\\\', Calibri, \\\\\\\'Trebuchet MS\\\\\\\', sans-serif;
+}
+
+img {
+    width: 500px;
+}
+
 img.fixed { /* This is only for the image gallery. */
   height: 80%; 
   width: 80%;
@@ -267,13 +162,6 @@ img.fixed { /* This is only for the image gallery. */
 
 p {
   color: #ffeffe;
-}
-
-p.error {
-  font-size: 15px;
-  color: #fffeef;
-  font-family: monospace;
-  letter-spacing: .14em;
 }
 
 p.angryerror { /* Pink and bold. */
@@ -286,6 +174,13 @@ p.angryerror { /* Pink and bold. */
 
 p.cwisaesritam {
   letter-spacing: -2px; /* Pushes the letters together to make it look cursive. */
+}
+
+p.error {
+  font-size: 15px;
+  color: #fffeef;
+  font-family: monospace;
+  letter-spacing: .14em;
 }
 
 p.system_data {
@@ -307,36 +202,22 @@ p.typewriter {
       blink-caret .75s step-end infinite;
   }
 
-   /* The typing effect */
-   @keyframes typing {
-    from { width: 0; } /* At the start, no width. */
-    to { width: 100%; } /* At the end, full width. */
-  }
-
-   /* The typewriter cursor effect */
-   @keyframes blink-caret {
-    from, to { border-color: transparent } /* At start and end of animation, invisible */
-    50% { border-color: #006400; } /* Halfway through, visible. */
-  }
+.container {
+    display: flex;
+}
 
 /* Main content */
 .main {
   margin-top: 30px; /* Adds a top margin to avoid content overlay */
 }
 
-/* The navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333333;
-  position: sticky; /* Stays at top when scrolled */ 
-  z-index: 1; /* Move to front layer. */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+.margin {
+    margin:16px!important
 }
 
 /* Link styling */
 .navbar a {
-  text-decoration: double; /* I'd like to have it work, but this doesn't work. So it's useless. */
+  text-decoration: double; /* I\\\\\\\'d like to have it work, but this doesn\\\\\\\'t work. So it\\\\\\\'s useless. */
   float: left; /* Stay on the left. */
   display: block;
   color: #feebee;
@@ -349,6 +230,23 @@ p.typewriter {
 .navbar a:hover {
   background: #abcdef;
   color: #123456; /* Funny number for hex. */
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333333;
+  position: sticky; /* Stays at top when scrolled */ 
+  z-index: 1; /* Move to front layer. */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
 }
 
 .post {
@@ -373,40 +271,7 @@ p.typewriter {
   width: 100%;
   height: 8px;
   background: #cccccc;
-  margin-top: 55px; /* Moves the bar below the navbar so it's not blocked, but still at the top. */
-}
-
-@keyframes progress { /* Different colors every few seconds. Rainbow, yay! */
-  0% {
-    background-color: #b5005b;
-  }
-  10% {
-    background-color: #ff0051;
-  }
-  20% {
-    background-color: #ff0000;
-  }
-  30% {
-    background-color: #ffa200;
-  }
-  40% {
-    background-color: #eaff00;
-  }
-  50% {
-    background-color: #00ff00;
-  }
-  60% {
-    background-color: #04aa6d;
-  }
-  70% {
-    background-color: #123456;
-  }
-  80% {
-    background-color: #640046;
-  }
-  90% {
-    background-color: #9400d3;
-  }
+  margin-top: 55px; /* Moves the bar below the navbar so it\\\\\\\'s not blocked, but still at the top. */
 }
 
 .shaky {
@@ -427,18 +292,60 @@ p.typewriter {
 
 .shaky_delay:hover {
   color: #7fff00; /* Same as .shaky. */
+}.smaller {
+    width: 40%;
 }
 
-@keyframes shake { /* Animation for moving. */
-  0% { transform: translate(3px, -1px) rotate(0deg); }
-  10% { transform: translate(-1px, -3px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(0px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 1px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(2px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+#content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #849e75;
+    box-shadow: 20px 20px 10px rgba(0,0,0,0.1);
 }
+
+#info {
+    margin-left: 100px;
+    background-color: #d6a57a;
+    width: 730px;
+    padding: 20px;
+    text-align: center;
+}
+
+#mainbody {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#sally {
+    width: 35%;
+    margin-left: 165px;
+    padding: 20px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#spacing {
+    margin-bottom: 5em;
+}
+
+#sub {
+    font-size: large;
+    font-family: \\\\\\\'Trebuchet MS\\\\\\\', \\\\\\\'Lucida Sans Unicode\\\\\\\', \\\\\\\'Lucida Grande\\\\\\\', \\\\\\\'Lucida Sans\\\\\\\', Arial, sans-serif;
+}
+
+#weblinks {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
