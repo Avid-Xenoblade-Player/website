@@ -67,3 +67,231 @@ body.home { /* Home page stylings */
 		background-size: 60% 60%, 40% 40%, 20% 20%;
 	}
 }
+
+.card {
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)    
+}
+
+a { /* Link styling */
+  color: #62ff00;
+  background-color: #33333e; 
+  padding: 0px 5px;
+}
+
+a:hover { /* Change appearance on hover */
+  color: #62ff88;
+  background-color: #333322;
+  padding: 0px 5px;
+}
+
+body { /* Global body styling */
+    font-family: "Atkinson Hyperlegible", sans-serif; /* This is just a font I like. */
+    margin: 0 3.1415 0 0; /* Margin to the left. */
+    padding: 0; /* No padding. */
+    }
+
+body.example {
+  border-radius: number%;
+  background-image: radial-gradient(circle at center, #hexa 0%, #hexa00 100%),
+                  radial-gradient(circle at top left, #hexb 0%, #hexb00 100%),
+                  radial-gradient(circle at bottom right, #hexc 0%, #hexc00 100%);
+  animation: outwardFlow (number)s infinite; /* Move infinitely, then repeat every 5 seconds */
+}
+
+body.exampleinuse {
+   /* No radius, defaulting to 100% here. */
+  background-image: radial-gradient(circle at center, #000000 0%, #00000000 100%),
+                    radial-gradient(circle at center, #ffffff 0%, #ffffff00 100%),
+                    radial-gradient(circle at center, #123456 0%, #12345600 100%);
+  animation: outwardFlow 10s infinite;
+}
+
+button {
+  height: 5%
+  widt: 5%
+  background-color: #333333;
+  color: #feebee;
+  font-family: \\\\\\\"Atkinson Hypereligible\\\\\\\", sans-serif;
+  height: 50px;
+  width: 100px;
+  font-size: 16px;
+}
+
+div.content { /* Div for .txt posts */
+    width: 85%; 
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #333333;
+}
+
+div.postcontent { /* Div for .html pages */
+    width: 95%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #333333;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: overline; /* Overline is such a cool decoration, so I put it in. It's only visible during the typing, however. */
+    color: #eeeeee;
+    background-color: #333333;
+    overflow: hidden; /* Keeps it hidden before it is 'typed'. */
+    border-right: .5em solid #ffffff; /* Cursor rectangle */
+    /*white-space: nowrap; If uncommented, keeps content on one line. Optional. */
+    margin: 0 auto; /* Scrolling effect */
+    letter-spacing: .10em;
+    animation: 
+        typing 1.9s steps(40, end), /* Typing animation */
+        blink-caret .75s step-end infinite; /* Cursor animation */
+}
+
+p.cursive {
+  letter-spacing: -2px; /* Pushes the letters together to make it look cursive. */
+}
+
+p.typewriter {
+    color: #eeeeee;
+    background-color: #333333;
+    overflow: hidden;
+    border-right: .15em solid #006400; /* Cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+.main {
+  margin-top: 30px; /* Adds a top margin to avoid content overlay */
+}
+
+/* Link styling */
+.navbar a {
+  text-decoration: double; /* I'd like to have it work, but this doesn't work. So it's useless. */
+  float: left; /* Stay on the left. */
+  display: block;
+  color: #feebee;
+  background-color: #333333;
+  text-align: center;
+  padding: 16px;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #abcdef;
+  color: #123456; /* Funny number for hex. */
+}
+
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333333;
+  position: sticky; /* Stays at top when scrolled */ 
+  z-index: 1; /* Move to front layer. */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
+}
+
+.post {
+    margin-bottom: 2px;
+    padding: 20px;
+    border-bottom: 3px dashed #bbbbbb; /* Dashes look like an old receipt. */
+    border-top: 3px dashed #dddddd; /* Different color to look nice. */
+    white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
+}
+
+/* Scroll bar. */
+.progress-bar {
+  height: 8px;
+  background: #b5005b; /* By default, a pinkish bar. */
+  width: 0%;
+  animation: progress 30s infinite;
+}
+
+
+/* Background of scroll bar. */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #cccccc;
+  margin-top: 55px; /* Moves the bar below the navbar so it's not blocked, but still at the top. */
+}
+
+.shaky {
+  position: relative; /* Layer controls */
+  z-index: 0; /* Move behind the navbar. */
+  animation: shake 0.5s infinite; 
+}
+
+.shaky:hover {
+  color: #7fff00; /* When hovered, change color. */
+}
+
+.shaky_delay {
+  position: relative;
+  z-index: 0; /* Same as .shaky. */
+  animation: shake 0.5s var(--delay) infinite; /* Use a combination of javascript and html to make each letter shake individually at a different offset. */
+}
+
+.shaky_delay:hover {
+  color: #7fff00; /* Same as .shaky. */
+}.smaller {
+    width: 40%;
+}
+
+#content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #849e75;
+    box-shadow: 20px 20px 10px rgba(0,0,0,0.1);
+}
+
+#info {
+    margin-left: 100px;
+    background-color: #d6a57a;
+    width: 730px;
+    padding: 20px;
+    text-align: center;
+}
+
+#mainbody {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#sally {
+    width: 35%;
+    margin-left: 165px;
+    padding: 20px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#spacing {
+    margin-bottom: 5em;
+}
+
+#weblinks {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
