@@ -1,1 +1,116 @@
+Eden:
 
+.card {
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
+    
+}
+
+body {
+    background-image: url('nature.jpg')
+}
+
+.margin {
+    margin:16px!important
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('home_background.jpg');
+    background-size: cover;
+}
+
+#weblinks {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#mainbody {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 30px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#spacing {
+    margin-bottom: 5em;
+}
+
+#sally {
+    width: 35%;
+    margin-left: 165px;
+    padding: 20px;
+    background-color: #d6a57a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+img {
+    width: 500px;
+}
+
+.container {
+    display: flex;
+}
+
+#info {
+    margin-left: 100px;
+    background-color: #d6a57a;
+    width: 730px;
+    padding: 20px;
+    text-align: center;
+}
+
+h2,h1 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button {
+    width: 5%;
+    height: 5%;
+    background-color: #f2c8a2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 1px;
+    background-image: url('background.jpg');
+    background-size: cover;
+}
+
+#content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #849e75;
+    box-shadow: 20px 20px 10px rgba(0,0,0,0.1);
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    white-space: pre-wrap; /* This preserves whitespace and line breaks in the text files */
+}
+
+h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#sub {
+    font-size: large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.smaller {
+    width: 40%;
+}
