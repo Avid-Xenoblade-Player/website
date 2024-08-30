@@ -4,8 +4,8 @@ img.logo {
 }
 
 .logo-container {
-	width: 264px; /* Set a width for the div */
-  	height: 93px; /* Set a height for the div */
+	width: 88px; /* Set a width for the div */
+  	height: 31px; /* Set a height for the div */
   	background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%), /* Gradient A */
                     	radial-gradient(circle at center, #333333 0%, #33333300 100%), /* Gradient B */
                     	radial-gradient(circle at center, #888888 0%, #88888800 100%); /* Gradient C */
