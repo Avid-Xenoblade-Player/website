@@ -228,6 +228,39 @@ p.typewriter {
   margin-top: 55px; /* Moves the bar below the navbar so it's not blocked, but still at the top. */
 }
 
+@keyframes progress { /* Different colors every few seconds. Rainbow, yay! */
+  0% {
+    background-color: #b5005b;
+  }
+  10% {
+    background-color: #ff0051;
+  }
+  20% {
+    background-color: #ff0000;
+  }
+  30% {
+    background-color: #ffa200;
+  }
+  40% {
+    background-color: #eaff00;
+  }
+  50% {
+    background-color: #00ff00;
+  }
+  60% {
+    background-color: #04aa6d;
+  }
+  70% {
+    background-color: #123456;
+  }
+  80% {
+    background-color: #640046;
+  }
+  90% {
+    background-color: #9400d3;
+  }
+}
+
 .shaky {
   position: relative; /* Layer controls */
   z-index: 0; /* Move behind the navbar. */
