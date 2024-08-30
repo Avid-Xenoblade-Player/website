@@ -7,10 +7,6 @@ td.links {
 	margin-left: 0;
 }
 
-td.logo-navbar {
-	text-align: right;
-}
-
 .logo-container {
 	width: 88px; /* Set a width for the div */
   	height: 31px; /* Set a height for the div */
@@ -20,6 +16,7 @@ td.logo-navbar {
   	background-repeat: no-repeat; /* Prevent the background from repeating */
   	background-position: center center; /* Center the background */
   	animation: zoomEffect 5s infinite linear; /* Infinite zoom effect */
+	text-align: right;
 }
 
 body.home { /* Home page stylings */
