@@ -335,3 +335,30 @@ p.typewriter {
     background-color: #d6a57a;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+#example_game {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main_body {
+  background-color: lightblue;
+  margin: 300px;
+  margin-top: 20px;
+}
+
+#Edenpage {
+    background-image: url(../images/Example_Game_Background.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    background-attachment: fixed;
+    
+    height: 300vh;
+}
+
+#checkout_logo {
+  
+}
