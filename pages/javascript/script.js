@@ -75,32 +75,40 @@ function toggleDarkMode() {
 */
 var unpurchasedItems = [];
 var purchasedItems = [];
-var allItems = [unpurchasedItems, purchasedItems];
 
 function saveCart() {
   const cartData = {
     purchasedItems: purchasedItems,
     unpurchasedItems: unpurchasedItems,
-    allItems: allItems,
   };
   localStorage.setItem('shopCartData', JSON.stringify(cartData));
-  document.getElementById("cart").innerHTML = cartData;
+
+  // Display the cart contents
+  const cartElement = document.getElementById("cart");
+  cartElement.innerHTML = "";
+  cartData.purchasedItems.forEach(item => {
+    const purchasedItemElement = document.createElement("p");
+    purchasedItemElement.textContent = `Purchased: ${item}`;
+    cartElement.appendChild(purchasedItemElement);
+  });
+  cartData.unpurchasedItems.forEach(item => {
+    const unpurchasedItemElement = document.createElement("p");
+    unpurchasedItemElement.textContent = `Unpurchased: ${item}`;
+    cartElement.appendChild(unpurchasedItemElement);
+  });
 }
 
 function addSimon() {
   unpurchasedItems.push("Simon");
-  allItems = [unpurchasedItems, purchasedItems];
   saveCart();
 }
 
 function addClick() {
   unpurchasedItems.push("Click");
-  allItems = [unpurchasedItems, purchasedItems];
   saveCart();
 }
 
 function addPhishing() {
   unpurchasedItems.push("Phishing");
-  allItems = [unpurchasedItems, purchasedItems];
   saveCart();
 }
