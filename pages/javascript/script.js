@@ -86,3 +86,21 @@ function saveCart() {
   localStorage.setItem('shopCartData', JSON.stringify(cartData));
   document.getElementById("cart").innerHTML = cartData;
 }
+
+function addSimon() {
+  unpurchasedItems.push("Simon");
+  var allItems = [unpurchasedItems, purchasedItems];
+  saveCart()
+}
+
+function addClick() {
+  unpurchasedItems.push("Click");
+  var allItems = [unpurchasedItems, purchasedItems];
+  saveCart()
+}
+
+function addPhishing() {
+  unpurchasedItems.push("Phishing");
+  var allItems = [unpurchasedItems, purchasedItems];
+  saveCart()
+}
