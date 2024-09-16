@@ -73,3 +73,16 @@ function toggleDarkMode() {
   }
 }
 */
+var unpurchasedItems = [];
+var purchasedItems = [];
+var allItems = [unpurchasedItems, purchasedItems];
+
+function saveCart() {
+  const cartData = {
+    purchasedItems: purchasedItems,
+    unpurchasedItems: unpurchasedItems,
+    allItems: allItems,
+  };
+  localStorage.setItem('shopCartData', JSON.stringify(cartData));
+  document.getElementById("cart").innerHTML = cartData;
+}
