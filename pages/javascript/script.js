@@ -90,17 +90,17 @@ function saveCart() {
 function addSimon() {
   unpurchasedItems.push("Simon");
   var allItems = [unpurchasedItems, purchasedItems];
-  saveCart()
+  saveCart();
 }
 
 function addClick() {
   unpurchasedItems.push("Click");
   var allItems = [unpurchasedItems, purchasedItems];
-  saveCart()
+  saveCart();
 }
 
 function addPhishing() {
   unpurchasedItems.push("Phishing");
   var allItems = [unpurchasedItems, purchasedItems];
-  saveCart()
+  saveCart();
 }
