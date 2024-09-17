@@ -75,32 +75,28 @@ function toggleDarkMode() {
 */
 var unpurchasedItems = [];
 var purchasedItems = [];
-var allItems = [unpurchasedItems, purchasedItems];
 
 function saveCart() {
-  const cartData = {
-    purchasedItems: purchasedItems,
-    unpurchasedItems: unpurchasedItems,
-    allItems: allItems,
-  };
-  localStorage.setItem('shopCartData', JSON.stringify(cartData));
-  document.getElementById("cart").innerHTML = cartData;
+  const cartData = {
+    unpurchasedItems,
+    purchasedItems,
+  };
+  localStorage.setItem('shopCartData', JSON.stringify(cartData));
+  document.getElementById("cart").innerHTML = JSON.stringify(cartData); 
 }
+
 
 function addSimon() {
   unpurchasedItems.push("Simon");
-  allItems = [unpurchasedItems, purchasedItems];
   saveCart();
 }
 
 function addClick() {
   unpurchasedItems.push("Click");
-  allItems = [unpurchasedItems, purchasedItems];
   saveCart();
 }
 
 function addPhishing() {
   unpurchasedItems.push("Phishing");
-  allItems = [unpurchasedItems, purchasedItems];
   saveCart();
 }
