@@ -21,7 +21,7 @@ var purchasedItems = [];
 function saveCart() {
   const cartData = {
     unpurchasedItems,
-    purchasedItems,
+    purchasedItems;
   };
   localStorage.setItem('shopCartData', JSON.stringify(cartData));
   document.getElementById("cart").innerHTML = JSON.stringify(cartData); 
