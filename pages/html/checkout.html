@@ -5,7 +5,35 @@
     <link rel="preconnect" href="https://fonts.bunny.net" />
     <link href="https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i" rel="stylesheet" />
     <link rel="stylesheet" href="../styles/styles.css" />
-    <script src="../javascript/script.js"></script>
+    <script>
+	    var unpurchasedItems = [];
+var purchasedItems = [];
+
+function saveCart() {
+  const cartData = {
+    unpurchasedItems,
+    purchasedItems,
+  };
+  localStorage.setItem('shopCartData', JSON.stringify(cartData));
+  document.getElementById("cart").innerHTML = JSON.stringify(cartData); 
+}
+
+
+function addSimon() {
+  unpurchasedItems.push("Simon");
+  saveCart();
+}
+
+function addClick() {
+  unpurchasedItems.push("Click");
+  saveCart();
+}
+
+function addPhishing() {
+  unpurchasedItems.push("Phishing");
+  saveCart();
+}
+    </script>
 	
 </head>
 <body class="homepage">
