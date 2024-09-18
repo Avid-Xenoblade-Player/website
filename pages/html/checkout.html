@@ -83,9 +83,22 @@
 	<p>SCROLLING TEXT</p>
 	<p>SCROLLING TEXT</p>
 </body>
-    <script>var unpurchasedItems = [];
+    <script>
+var unpurchasedItems = [];
 var purchasedItems = [];
 
+window.onload = function() {loadGame()};
+
+function loadGame() {
+       const savedData = localStorage.getItem('cartData');
+       const gameData = JSON.parse(savedData);
+       if (savedData) { 
+	       unpurchasedItems = gameData.unpurchasedItems;
+               purchasedItems = gameData.purchasedItems;
+               document.getElementById("cart").innerHTML = "Game loaded successfully.";
+        };
+		}
+	    
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
@@ -103,16 +116,6 @@ function saveGame() {
         localStorage.setItem('cartData', JSON.stringify(gameData));
         document.getElementById("cart").innerHTML = JSON.stringify(gameData);
       }
-      function loadGame() {
-        const savedData = localStorage.getItem('cartData');
-		  const gameData = JSON.parse(savedData);
-		  let confirm = prompt("Are you sure you would like to load? Type 'CONFIRM2574' for yes. \n Most recent save data: \n Times pressed: " + gameData.timesPressed + ". \n Presses per press: " + gameData.pressesPer + ". \n Distance travelled: " + ".");
-		  if (confirm == "CONFIRM2574" && savedData) { 
-          		unpurchasedItems = gameData.unpurchasedItems;
-          		purchasedItems = gameData.purchasedItems;
-          		document.getElementById("cart").innerHTML = "Game loaded successfully.";
-        };
-		}
 
 function addSimon() {
   unpurchasedItems.push("Simon");
