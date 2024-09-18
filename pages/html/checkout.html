@@ -100,9 +100,19 @@ function saveGame() {
           purchasedItems: purchasedItems,
           unpurchasedItems: unpurchasedItems,
           };
-        localStorage.setItem('clickerGameData', JSON.stringify(gameData));
+        localStorage.setItem('cartData', JSON.stringify(gameData));
         document.getElementById("cart").innerHTML = JSON.stringify(gameData);
       }
+      function loadGame() {
+        const savedData = localStorage.getItem('cartData');
+		  const gameData = JSON.parse(savedData);
+		  let confirm = prompt("Are you sure you would like to load? Type 'CONFIRM2574' for yes. \n Most recent save data: \n Times pressed: " + gameData.timesPressed + ". \n Presses per press: " + gameData.pressesPer + ". \n Distance travelled: " + ".");
+		  if (confirm == "CONFIRM2574" && savedData) { 
+          		unpurchasedItems = gameData.unpurchasedItems;
+          		purchasedItems = gameData.purchasedItems;
+          		document.getElementById("cart").innerHTML = "Game loaded successfully.";
+        };
+		}
 
 function addSimon() {
   unpurchasedItems.push("Simon");
@@ -117,6 +127,8 @@ function addClick() {
 function addPhishing() {
   unpurchasedItems.push("Phishing");
   saveGame();
-}</script>
+}
+    
+    </script>
 	
 </html>
