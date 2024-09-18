@@ -32,7 +32,7 @@ function saveGame() {
           unpurchasedItems: unpurchasedItems,
           };
         localStorage.setItem('clickerGameData', JSON.stringify(gameData));
-        document.getElementById("cart").innerHTML = "Saved successfully.";
+        document.getElementById("cart").innerHTML = gameData;
       }
 
 function addSimon() {
