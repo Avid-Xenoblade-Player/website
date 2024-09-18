@@ -15,7 +15,7 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 	    
-	    var unpurchasedItems = [];
+var unpurchasedItems = [];
 var purchasedItems = [];
 /*
 function saveCart() {
@@ -26,21 +26,31 @@ function saveCart() {
   localStorage.setItem('shopCartData', JSON.stringify(cartData));
   document.getElementById("cart").innerHTML = JSON.stringify(cartData); 
 }*/
-
+function saveGame() {
+        const gameData = {
+          purchasedItems: purchasedItems,
+          unpurchasedItems: unpurchasedItems,
+          };
+        localStorage.setItem('clickerGameData', JSON.stringify(gameData));
+        document.getElementById("cart").innerHTML = "Saved successfully.";
+      }
 
 function addSimon() {
   unpurchasedItems.push("Simon");
   /*saveCart();*/
+  saveGame();
 }
 
 function addClick() {
   unpurchasedItems.push("Click");
   /*saveCart();*/
+  saveGame();
 }
 
 function addPhishing() {
   unpurchasedItems.push("Phishing");
   /*saveCart();*/
+  saveGame();
 }
     </script>
 	
