@@ -1,11 +1,42 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <title>Page Title</title>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-        </head>
-        <body>
-            <h1>Test Heading</h1>
-            <p>Test paragraph.</p>
-        </body>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.bunny.net" />
+        <link href="https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i" rel="stylesheet" />
+        <link rel="stylesheet" href="../styles/styles.css" />
+        <title>Racebook Catfish Case</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body id="RacebookCasePage">
+    <div class="navbar">
+        <table>
+            <tr> 
+                <td class="links">
+                    <a href="homepage.html">Home</a>
+                    <a href="about.html">About the Game</a>
+                    <a href="gamepage.html">Play the Game</a>
+                    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="myBar"></div>
+                    </div>
+                </td> 
+                <td>
+                    <div class="logo-container">
+                        <img class="logo" src="../images/logo.png" alt="Logo">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h1>Racebook Catfish Case</h1>
+    <div id="main_body">
+        <img id="game_preview" src="../images/Game_Preview.gif" alt="Game Preview">
+        <p>Steps into the shoes of Phoenix Wright and solve the thrilling Racebook Catfish Case.</p>
+        <button type="button" onclick="window.location.href='https://scratch.mit.edu/projects/1029063704/'">Play Now!</button>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
