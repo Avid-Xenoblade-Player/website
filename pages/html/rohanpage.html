@@ -1,27 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Preload a custom font from Bunny -->
         <link rel="preconnect" href="https://fonts.bunny.net" />
         <link href="https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i" rel="stylesheet" />
+        <!-- Link to external CSS for styling -->
         <link rel="stylesheet" href="../styles/styles.css" />
-        <title>Racebook Catfish Case</title>
+        <title>Turnabout Phishing</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 <body id="RacebookCasePage">
+    <!-- Navigation bar at the top of the page -->
     <div class="navbar">
         <table>
             <tr> 
                 <td class="links">
+                    <!-- Links to other pages on the website -->
                     <a href="homepage.html">Home</a>
-                    <a href="about.html">About the Game</a>
-                    <a href="gamepage.html">Play the Game</a>
+                    <a href="edenpage.html">What Is Simon Doing?</a>
+                    <a href="mattpage.html">Click To Continue</a>
+                    <!-- Button to toggle dark mode -->
                     <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
                     <div class="progress-container">
                         <div class="progress-bar" id="myBar"></div>
                     </div>
                 </td> 
                 <td>
+                    <!-- Logo section -->
                     <div class="logo-container">
                         <img class="logo" src="../images/logo.png" alt="Logo">
                     </div>
@@ -30,13 +36,23 @@
         </table>
     </div>
 
-    <h1>Racebook Catfish Case</h1>
+    <!-- Main body content for the game page -->
+    <h1>Turnabout Phishing</h1>
     <div id="main_body">
+        <!-- Preview image of the game -->
         <img id="game_preview" src="../images/Game_Preview.gif" alt="Game Preview">
-        <p>Steps into the shoes of Phoenix Wright and solve the thrilling Racebook Catfish Case.</p>
+        
+        <!-- Game description that includes the premise -->
+        <p>Step into the shoes of Phoenix Wright in this thrilling Ace Attorney case where two old best friends, Billy Boo and Willy Woo, are caught up in a catfishing scandal.</p>
+        
+        <!-- Detailed premise of the game -->
+        <p>Willy Woo claims that Billy Boo framed him on the popular social media site Racebook, but Phoenix Wright has doubts. It's up to you to help Phoenix identify the contradictions in Willy Woo's testimony. Was Billy really the catfisher, or is Willy hiding something?</p>
+
+        <!-- Play button that redirects to the Scratch game -->
         <button type="button" onclick="window.location.href='https://scratch.mit.edu/projects/1029063704/'">Play Now!</button>
     </div>
 
+    <!-- Link to external JavaScript -->
     <script src="../scripts/main.js"></script>
 </body>
 </html>
