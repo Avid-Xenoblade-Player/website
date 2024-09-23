@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Preload a custom font from Bunny -->
-        <link rel="preconnect" href="https://fonts.bunny.net" />
-        <link href="https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i" rel="stylesheet" />
-        <!-- Link to external CSS for styling -->
-        <link rel="stylesheet" href="../styles/styles.css" />
-        <title>Turnabout Phishing</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
+<head>
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=atkinson-hyperlegible:400,400i,700,700i" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <title>Turnabout Phishing</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 <body id="RacebookCasePage">
-    <!-- Navigation bar at the top of the page -->
-    <div class="navbar">
-        <table>
-            <tr> 
-                <td class="links">
-                    <!-- Links to other pages on the website -->
-                    <a href="homepage.html">Home</a>
-                    <a href="edenpage.html">What Is Simon Doing?</a>
-                    <a href="mattpage.html">Click To Continue</a>
-                    <!-- Button to toggle dark mode -->
-                    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-                    <div class="progress-container">
-                        <div class="progress-bar" id="myBar"></div>
-                    </div>
-                </td> 
-                <td>
-                    <!-- Logo section -->
-                    <div class="logo-container">
-                        <img class="logo" src="../images/logo.png" alt="Logo">
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <!-- Header section with navigation links -->
+    <header>
+        <div class="navbar">
+            <a href="homepage.html">Home</a>
+            <a href="edenpage.html">What Is Simon Doing?</a>
+            <a href="mattpage.html">Click to Continue</a>
+            <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        </div>
+        <div class="banner">
+            <img class="logo" src="logo.png" alt="Logo">
+            <h1>Turnabout Phishing</h1>
+            <p>Investigate the case of Billy Boo, framed for catfishing by his former best friend Willy Woo.</p>
+        </div>
+    </header>
 
-    <!-- Main body content for the game page -->
-    <h1>Turnabout Phishing</h1>
-    <div id="main_body">
-        <!-- Preview image of the game -->
-        <img id="game_preview" src="../images/Game_Preview.gif" alt="Game Preview">
-        
-        <!-- Game description that includes the premise -->
-        <p>Step into the shoes of Phoenix Wright in this thrilling Ace Attorney case where two old best friends, Billy Boo and Willy Woo, are caught up in a catfishing scandal.</p>
-        
-        <!-- Detailed premise of the game -->
-        <p>Willy Woo claims that Billy Boo framed him on the popular social media site Racebook, but Phoenix Wright has doubts. It's up to you to help Phoenix identify the contradictions in Willy Woo's testimony. Was Billy really the catfisher, or is Willy hiding something?</p>
+    <!-- Main content -->
+    <main>
+        <section class="game-info">
+            <img id="game_preview" src="../images/Game_Preview.gif" alt="Game Preview">
+            <p>In *Turnabout Phishing*, you take the role of Phoenix Wright, uncovering the lies in Willy Woo’s testimony. Will you discover the real culprit behind the Racebook catfishing scheme?</p>
+        </section>
 
-        <!-- Play button that redirects to the Scratch game -->
-        <button type="button" onclick="window.location.href='https://scratch.mit.edu/projects/1029063704/'">Play Now!</button>
-    </div>
+        <section class="checkout-section">
+            <button type="button" onclick="window.location.href='https://scratch.mit.edu/projects/1029063704/'">Check Out Now!</button>
+        </section>
+    </main>
 
-    <!-- Link to external JavaScript -->
-    <script src="../scripts/main.js"></script>
+    <footer>
+        <p>Follow for updates!</p>
+        <div class="social-links">
+            <a href="https://twitter.com">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript to toggle dark mode -->
+    <script>
+        function toggleDarkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            let button = document.getElementById("darkModeToggle");
+            if (element.classList.contains("dark-mode")) {
+                button.textContent = "Light Mode";
+            } else {
+                button.textContent = "Dark Mode";
+            }
+        }
+    </script>
+
 </body>
 </html>
