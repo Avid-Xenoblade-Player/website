@@ -47,9 +47,9 @@ body.homepage { /* Home page stylings */
 
 body.mattpage {
 	border-radius: 10%;
-	background-image: radial-gradient(circle at center, #ff6767 0%, #00000000 100%),
+	background-image: radial-gradient(circle at center, #000000 0%, #00000000 100%),
 			  radial-gradient(circle at left, #563a90 0%, #00000000 100%),
-		          radial-gradient(circle at right, #000000 0%, #00000000 100%);
+		          radial-gradient(circle at right, #ff6767 0%, #00000000 100%);
 	animation: outwardFlow 30s infinite;
 }
 
