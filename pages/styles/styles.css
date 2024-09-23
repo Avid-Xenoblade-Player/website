@@ -37,12 +37,20 @@ td.links {
 	text-align: right;
 }
 
-body.home { /* Home page stylings */
+body.homepage { /* Home page stylings */
   border-radius: 10%; /* Small radius */
   background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%), /* Fade to nothing, so the other colors appear */
                   radial-gradient(circle at top left, #333333 0%, #33333300 100%),
                   radial-gradient(circle at bottom right, #0000ff 0%, #0000ff00 100%);
   animation: outwardFlow 30s infinite; /* Move infinitely, then repeat every 30 seconds */
+}
+
+body.mattpage {
+	border-radius: 10%;
+	background-image: radial-gradient(circle at center, #ff6767 0%, #00000000 100%),
+			  radial-gradient(circle at left, #563a90 0%, #00000000 100%),
+		          radial-gradient(circle at right, #000000 0%, #00000000 100%);
+	animation: outwardFlow 30s infinite;
 }
 
 @keyframes outwardFlow { /* Gradient moving animation. */
