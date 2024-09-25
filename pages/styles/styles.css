@@ -315,74 +315,158 @@ p.typewriter {
 }
 
 #content {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #849e75;
-    box-shadow: 20px 20px 10px rgba(0,0,0,0.1);
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #849e75;
+  box-shadow: 20px 20px 10px rgba(0,0,0,0.1);
 }
 
 #info {
-    margin-left: 100px;
-    background-color: #d6a57a;
-    width: 730px;
-    padding: 20px;
-    text-align: center;
+  margin-left: 100px;
+  background-color: #d6a57a;
+  width: 730px;
+  padding: 20px;
+  text-align: center;
 }
 
 #mainbody {
-    width: 80%;
-    margin: 0 auto;
-    padding-left: 30px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 30px;
-    background-color: #d6a57a;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  background-color: #d6a57a;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 #sally {
-    width: 35%;
-    margin-left: 165px;
-    padding: 20px;
-    background-color: #d6a57a;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    text-align: center;
+  width: 35%;
+  margin-left: 165px;
+  padding: 20px;
+  background-color: #d6a57a;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 #spacing {
-    margin-bottom: 5em;
+  margin-bottom: 5em;
 }
 
 #weblinks {
-    width: 80%;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #d6a57a;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #d6a57a;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 #example_game {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  float: left;
+  padding: 50px;
+  width: 700px;
+  height: auto;
 }
 
 #main_body {
   background-color: lightblue;
   margin: 300px;
   margin-top: 20px;
+  overflow: hidden;
 }
 
 #Edenpage {
-    background-image: url(../images/Example_Game_Background.gif);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    background-attachment: fixed;
-    
-    height: 300vh;
+  background-image: url(../images/Example_Game_Background.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-attachment: fixed;
+}
+
+html {
+  background-color:  #8DA9C4;
+}
+
+#text_eden {
+  float: right;
+  text-align: center;
+  background-color: #A1B9CE;
+  margin: 50px;
+  height: 400px;
+  width: 380px;
+  text-wrap: ;
+}
+
+#fix {
+  clear: both;
+  display: table;
+}
+
+#text_eden_left {
+  float: left;
+  text-align: center;
+  background-color: #A1B9CE;
+  margin: 50px;
+  height: 410px;
+  width: 500px;
+}
+
+#example_game_2 {
+  display: block;
+  float: right;
+  padding: 50px;
+  width: 550px;
+  height: auto;
+}
+
+#review_text_eden {
+  float: right;
+  text-align: center;
+  background-color: #A1B9CE;
+  margin: 60px;
+  height: 200px;
+  width: 500px;
+  border-radius: 25px;
+}
+
+#review_eden_left {
+  float: left;
+  text-align: center;
+  background-color: #A1B9CE;
+  margin: 60px;
+  height: 200px;
+  width: 500px;
+  border-radius: 25px;
+}
+
+li {
+  font-size: 30px;
+}
+
+#eden_game_desc {
+  font-size: 23px;
+}
+
+#stars {
+  width: auto;
+  height: 120px;
+}
+
+#purchase_eden {
+  float: left;
+  text-align: center;
+  background-color: #A1B9CE;
+  margin: 60px;
+  height: 200px;
+  width: 1170px;
+}
+
+#eden_button {
+  width: 200px;
+  height: 50px;
+  text-wrap: balance;
 }
 
 /* Rohans stuff */
