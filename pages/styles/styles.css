@@ -579,3 +579,25 @@ footer {
   color: #aaa;
   font-size: 1rem;
 }
+
+#details {
+  background-color: #A1B9CE;
+  width: 700px;
+  height: 600px;
+  margin-right: 200px;
+  border: #000000;
+  border-style: dotted;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 27px;
+  line-height: 200%;
+  float: right;
+}
+
+#purchase_buttons {
+  background-color: #0000ff;
+  align-content: center;
+  margin-left: 50px;
+  float: left;
+  width: 400px;
+}

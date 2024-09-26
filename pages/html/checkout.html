@@ -21,6 +21,7 @@
 	<div class="logo-container">
 	<img class="logo" src="../images/logo.png">
 	</div>
+	<div id="purchase_buttons">
 	</td>
 	<td>
 		<button onclick="loadGame()">Load Purchases</button>
@@ -39,7 +40,9 @@
 	<button onclick="addPhishing()">Click Here to Purchase Phishing</button>
 	</td>
 	</tr>
+	</div>
 	</table>
+    <div id="details">
 	<p id="cart">FILLER TEXT</p>
 	<label for="fName">First Name:</label>
 	<input type="text" id="fName" name="fName">
@@ -68,7 +71,8 @@
 	</fieldset>
 	<label for="secCode">Security Code</label>
 	<input type="number" min="4" max="4" id="secCode" name="secCode">
-	<button onclick="purchaseItems()">Purchase</button>
+	<p><button onclick="purchaseItems()">Purchase</button></p>
+    </div>
 </body>
     <script>
 var unpurchasedItems = [];
