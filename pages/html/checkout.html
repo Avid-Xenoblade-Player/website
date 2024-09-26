@@ -16,16 +16,11 @@
         <a href="edenpage.html">What Is Simon Doing?</a>
         <a href="rohanpage.html">Turabout Phising: An Ace Attorney Game</a>
         <a href="mattpage.html">Click to Continue</a>
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
             </div> </td> <td>
 	<div class="logo-container">
 	<img class="logo" src="../images/logo.png">
-	</div>
-	    </td>
-	</tr>
-	</table>
 	</div>
 	<div id="purchase_buttons">
 	</td>
@@ -35,11 +30,25 @@
 		<button onclick="loadGame()">Load Purchases</button>
 	</td>
 	</tr>
-   <button onclick="purchasePackage()">Press to Purchase!</button>
+    </table>
+	</div>
+	<table>
+	<tr>
+	<td>
+	<button onclick="addSimon()">Click Here to Purchase Simon</button>
+	</td> <td>
+	<button onclick="addClick()">Click Here to Purchase Click</button>
+	</td>
+	<td>
+	<button onclick="addPhishing()">Click Here to Purchase Phishing</button>
+	</td>
+	</tr>
+	</div>
+	</table>
 
     <!--Details needed for checkout-->
     <div id="details">
-	<p id="cart"></p>
+	<p id="cart">FILLER TEXT</p>
 	<label for="fName">First Name:</label>
 	<input type="text" id="fName" name="fName">
 	<label for="lName">Last Name:</label>
@@ -106,10 +115,21 @@ function saveGame() {
           unpurchasedItems: unpurchasedItems,
           };
         localStorage.setItem('cartData', JSON.stringify(gameData));
-	}
+        document.getElementById("cart").innerHTML = JSON.stringify(gameData);
+      }
 
-function purchasePackage() {
-  unpurchasedItems.push("Package");
+function addSimon() {
+  unpurchasedItems.push("Simon");
+  saveGame();
+}
+
+function addClick() {
+  unpurchasedItems.push("Click");
+  saveGame();
+}
+
+function addPhishing() {
+  unpurchasedItems.push("Phishing");
   saveGame();
 }
 
@@ -118,7 +138,18 @@ function purchaseItems() {
         purchasedItems = purchasedItems.concat(unpurchasedItems);
         unpurchasedItems = [];
 
-      
+        // Count the occurrences of each game in purchasedItems
+        const gameCounts = purchasedItems.reduce((counts, game) => {
+            counts[game] = (counts[game] || 0) + 1;
+            return counts;
+        }, {});
+
+        // Create a confirmation message with the game counts
+        const confirmationMessage = "Purchase successful! You purchased:\n";
+        for (const game in gameCounts) {
+            confirmationMessage += `${gameCounts[game]} ${game}\n`;
+        }
+
         // Encode the data using base64
         const encodedData = btoa(JSON.stringify(gameData));
 
@@ -126,7 +157,9 @@ function purchaseItems() {
         localStorage.setItem('cartData', encodedData);
 
 	saveGame();
-	document.getElementById("cart").innerHTML = "Thank you for purchasing! You have purchased " + purchasedItems.length + " packages.";
+
+        // Display the confirmation message
+        document.getElementById("cart").innerHTML = confirmationMessage;
     } else {
         // Display an error message indicating missing or invalid fields
         document.getElementById("cart").innerHTML = "Please fill in all required fields.";
