@@ -49,7 +49,7 @@
 
     <!--Details needed for checkout-->
     <div id="details">
-	<p id="cart">FILLER TEXT</p>
+	<p id="cart"></p>
 	<label for="fName">First Name:</label>
 	<input type="text" id="fName" name="fName">
 	<label for="lName">Last Name:</label>
@@ -116,7 +116,19 @@ function saveGame() {
           unpurchasedItems: unpurchasedItems,
           };
         localStorage.setItem('cartData', JSON.stringify(gameData));
-        document.getElementById("cart").innerHTML = JSON.stringify(gameData);
+        
+	// Count the occurrences of each game in unpurchasedItems
+        const gameCounts = unpurchasedItems.reduce((counts, game) => {
+            counts[game] = (counts[game] || 0) + 1;
+            return counts;
+        }, {});
+
+        // Create a confirmation message with the game counts
+        const confirmationMessage = "Purchase successful! You purchased:\n";
+        for (const game in gameCounts) {
+            confirmationMessage += `${gameCounts[game]} ${game}\n`;
+        }
+
       }
 
 function addSimon() {
@@ -139,18 +151,7 @@ function purchaseItems() {
         purchasedItems = purchasedItems.concat(unpurchasedItems);
         unpurchasedItems = [];
 
-        // Count the occurrences of each game in purchasedItems
-        const gameCounts = purchasedItems.reduce((counts, game) => {
-            counts[game] = (counts[game] || 0) + 1;
-            return counts;
-        }, {});
-
-        // Create a confirmation message with the game counts
-        const confirmationMessage = "Purchase successful! You purchased:\n";
-        for (const game in gameCounts) {
-            confirmationMessage += `${gameCounts[game]} ${game}\n`;
-        }
-
+      
         // Encode the data using base64
         const encodedData = btoa(JSON.stringify(gameData));
 
