@@ -38,7 +38,7 @@ td.links {
 }
 
 body.homepage { /* Home page stylings */
-  border-radius: 10%; /* Small radius */
+  border-radius: 0%; /* Small radius */
   background-image: radial-gradient(circle at center, #006400 0%, #00640000 100%), /* Fade to nothing, so the other colors appear */
                   radial-gradient(circle at top left, #333333 0%, #33333300 100%),
                   radial-gradient(circle at bottom right, #0000ff 0%, #0000ff00 100%);
