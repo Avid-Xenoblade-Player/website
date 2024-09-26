@@ -7,6 +7,8 @@
 	
 </head>
 <body class="homepage">
+
+    <!--Navigation Bar-->
         <div class="navbar">
 	<table> <tr> 
 	<td class="links">
@@ -23,6 +25,8 @@
 	</div>
 	<div id="purchase_buttons">
 	</td>
+
+    <!--Buttons that allow what game to purchase-->
 	<td>
 		<button onclick="loadGame()">Load Purchases</button>
 	</td>
@@ -42,6 +46,8 @@
 	</tr>
 	</div>
 	</table>
+
+    <!--Details needed for checkout-->
     <div id="details">
 	<p id="cart">FILLER TEXT</p>
 	<label for="fName">First Name:</label>
@@ -74,6 +80,8 @@
 	<p><button onclick="purchaseItems()">Purchase</button></p>
     </div>
 </body>
+
+<!--Script that makes the buttons work-->
     <script>
 var unpurchasedItems = [];
 var purchasedItems = [];
