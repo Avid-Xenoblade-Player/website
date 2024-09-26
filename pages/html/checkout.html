@@ -47,60 +47,29 @@
 	<label for="lName">Last Name:</label>
 	<input type="text" id="lName" name="lName">
 	<label for="CardNo">Card Number</label>
-        <input type="text" id="CardNo" name="CardNo"><br><br>
-	<label for="expDate">Expiry Date</label>
-	<input type="text" id="expDate" name="expDate">
+        <input type="number" min="15" max="19" id="CardNo" name="CardNo"><br><br>
+	<fieldset> <legend>Expiry Date</legend>
+	<label for="expDate">Month</label>
+	<select id="expDate" name="expDate">
+  	<option value="0001">01</option>
+  	<option value="0010">02</option>
+  	<option value="0011">03</option>
+  	<option value="0100">04</option>
+	<option value="0101">05</option>
+  	<option value="0110">06</option>
+  	<option value="0111">07</option>
+  	<option value="1000">08</option>
+	<option value="1001">09</option>
+  	<option value="1010">10</option>
+  	<option value="1011">11</option>
+  	<option value="1100">12</option>
+	</select>
+	<label for="expYear">Year</label>
+	<input type="number" min="2" max="2" id="expYear" name="expYear">
+	</fieldset>
 	<label for="secCode">Security Code</label>
-	<input type="text" id="secCode" name="secCode">
-	<input type="submit" />
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
-	<p>SCROLLING TEXT</p>
+	<input type="number" min="4" max="4" id="secCode" name="secCode">
+	<button onclick="purchaseItems()">Purchase</button>
 </body>
     <script>
 var unpurchasedItems = [];
@@ -109,14 +78,17 @@ var purchasedItems = [];
 window.onload = function() {loadGame()};
 
 function loadGame() {
-       const savedData = localStorage.getItem('cartData');
-       const gameData = JSON.parse(savedData);
-       if (savedData) { 
-	       unpurchasedItems = gameData.unpurchasedItems;
-               purchasedItems = gameData.purchasedItems;
-               document.getElementById("cart").innerHTML = "Game loaded successfully.";
-        };
-		}
+    const encodedData = localStorage.getItem('cartData');
+    if (encodedData) {
+        const gameData = decodeData();
+        unpurchasedItems = gameData.unpurchasedItems;
+        purchasedItems = gameData.purchasedItems;
+        document.getElementById("cart").innerHTML = "Game loaded successfully.";
+    } else {
+        // Handle the case where no saved data is found
+        document.getElementById("cart").innerHTML = "No saved game data found.";
+    }
+}
 	    
 window.onscroll = function() {myFunction()};
 
@@ -150,7 +122,50 @@ function addPhishing() {
   unpurchasedItems.push("Phishing");
   saveGame();
 }
-    
+
+function purchaseItems() {
+    if (fName.value !== null && lName.value !== null && CardNo.value !== null && expDate.value !== null && expYear.value !== null && secCode.value !== null) {
+        purchasedItems = purchasedItems.concat(unpurchasedItems);
+        unpurchasedItems = [];
+
+        // Count the occurrences of each game in purchasedItems
+        const gameCounts = purchasedItems.reduce((counts, game) => {
+            counts[game] = (counts[game] || 0) + 1;
+            return counts;
+        }, {});
+
+        // Create a confirmation message with the game counts
+        const confirmationMessage = "Purchase successful! You purchased:\n";
+        for (const game in gameCounts) {
+            confirmationMessage += `${gameCounts[game]} ${game}\n`;
+        }
+
+        // Encode the data using base64
+        const encodedData = btoa(JSON.stringify(gameData));
+
+        // Save the encoded data
+        localStorage.setItem('cartData', encodedData);
+
+        // Display the confirmation message
+        document.getElementById("cart").innerHTML = confirmationMessage;
+    } else {
+        // Display an error message indicating missing or invalid fields
+        document.getElementById("cart").innerHTML = "Please fill in all required fields.";
+    }
+}
+
+	    
+// Function to decode the data
+function decodeData() {
+    const encodedData = localStorage.getItem('cartData');
+    if (encodedData) {
+        const decodedData = atob(encodedData);
+        const gameData = JSON.parse(decodedData);
+        return gameData;
+    } else {
+        return null;
+    }
+}
     </script>
 	
 </html>
